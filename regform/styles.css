@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS START */
+
+
+body{
+    background-color: rgb(46, 46, 46);
+}
+
+.regKnapp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    background-color: rgb(166, 166, 255);
+    color: black;
+    font-size: 34px;
+    padding: 15px 30px;
+    margin: auto;
+    transition-duration: 1s;
+    border-radius: 20px;
+}
+
+.regKnapp:hover {
+    cursor: pointer;
+    background-color: rgb(116, 116, 255);
+}
+
+.line {
+    border-bottom: 1px solid rgb(53, 53, 53);
+}
+
+.regCont {
+    position: relative;
+    top: 175px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.regCont h1 {
+    color: white;
+    font-size: 37px;
+    padding: 5px 10px;
+    font-weight: 600;
+}
+
+.regCont p {
+    color: rgb(184, 184, 184);
+    font-size: 16px;
+    padding: 5px 10px;
+    font-weight: 100;
+}
+
+.regCHead {
+    padding-top: 10px;
+    text-align: center;
+    background-color: #166fe5;
+}
+
+form {
+    margin-left: 10%;
+}
+
+input {
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid rgb(181, 181, 181);
+    padding: 10px 15px;
+    background-color: rgb(235, 235, 235);
+}
+
+.regCUnd {
+    display: flex;
+    width: 550px;
+    padding: 15px 15px;
+}
+
+.sizeL {
+    margin-top: 15px;
+    width: 75.7%;
+}
+
+.birthd {
+    width: 100px;
+}
+
+.bText {
+    font-size: 14px;
+    color: rgb(85, 85, 85);
+}
+
+select {
+    width: 200px;
+    height: 30px;
+}
+
+.accept {
+    font-size: 11px;
+    color: gray;
+}
+
+.regisBtn {
+    position: relative;
+    left: 43%;
+    transform: translateX(-50%);
+    background-color: #00a400;
+    border: none;
+    font-size: 18px;
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-weight: 600;
+}
+
+.regisBtn:hover {
+    cursor: pointer;
+    background-color: rgb(10, 197, 32);
+}
+
+.exitCont {
+    position: relative;
+    float: right;
+    bottom: 65px;
+    right: 10px;
+}
+
+.exitCont:hover {
+    cursor: pointer;
+    color: red;
+}
+
+
+@media only screen and (max-width: 400px) {
+    body {
+        background-color: white;
+        height: 100%;
+        width: 100%;
+    }
+    .regCont {
+        max-width: 400px;
+        height: 100%;
+    }
+    .regCHead {
+        position: relative;
+        bottom: 180px;
+        width: 100%;
+        height: max-content;
+        
+    }
+    form {
+        margin: 0;
+    }
+}

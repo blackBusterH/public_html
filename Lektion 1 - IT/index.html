@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hej</title>
+    <meta charset="utf8" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="menu">
+        <a class="ommig" href="index.html">Om mig</a>
+        <a class="badplatser" href="badplatser.html">Badplatser</a>
+        <a class="tvserier" href="tvSerier.html">TV Serier</a>
+    </div>
+    <div class="bakgrund"></div>
+
+    <img class="minbild" src="https://scontent-ort2-1.cdninstagram.com/v/t51.2885-19/117924293_346043869730882_1534924540566357162_n.jpg?_nc_ht=scontent-ort2-1.cdninstagram.com&_nc_ohc=lE4SjfzpC3IAX8Nq-fP&oh=495019e4eb1630164527b1a4c0d88dad&oe=5F6D1000" alt="">
+
+    <pre class="brendon" id="brendon"></pre>
+
+    <h2 class="rainbow">Mina favorit sporter:</h2>
+
+    <div class="fotbollDiv">
+        <img class="uefa" src="https://lh3.googleusercontent.com/proxy/_Jp_DLK_91mAjdVNrrUgyaHlo9RS-CzfaFzW4f8oAiCshh67scJxNIc2M22o-y-W0EelPjq8_GZ7x2OmG2q1VLQ5Go4W2fj9VJ_nMGDuQ8Ht5_ZikWM" alt="">
+        <p class="fotboll">Fotboll</p>
+    </div>
+
+    <div class="mmaDiv">
+        <img class="ufcpic" src="https://upload.wikimedia.org/wikipedia/commons/9/92/UFC_Logo.svg" title="Det står UFC pga MMA är sporten och UFC är organisationen som t.ex. fotboll är MMA och UEFA är UFC.">
+        <p class="mma">Mixed Martial Arts (MMA)</p>
+    </div>
+
+
+
+    <script>
+        function typewriter(txt, speed, id, len = 0) {
+            var elm = document.getElementById(id);
+            if (len < txt.length) {
+                elm.innerHTML = elm.innerHTML + txt[len++]
+                setTimeout(typewriter, speed, txt, speed, id, len)
+            }
+
+
+        }
+
+        typewriter("Hej, jag heter Brendon Vinjari, jag går i IT inriktningen på Lugnetgymnasiet.\nJag är född 2003 och kommer från Albanien\nMin favorit maträtt är kebabpizza :)", 50, "brendon")
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'Catamaran', sans-serif;
+    background-color: rgb(1, 0, 15);
+}
+
+
+/* Header start */
+
+
+header {
+    font-family: 'Catamaran', sans-serif;
+    height: min-content;
+    background-color: rgb(2, 0, 32);
+}
+
+header ul {
+    text-transform: uppercase;
+}
+
+.nHead {
+    margin: auto;
+    margin-left: 300px;
+    padding-top: 30px;
+    font-size: 22px;
+    color: white;
+}
+
+.nav-cont {
+    list-style-type: none;
+    float: right;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.nav-cont li {
+    padding: 1px 10px;
+    display: inline-block;
+    font-weight: 800;
+}
+
+.nav-cont li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.nav-cont li>a::after {
+    content: '';
+    display: block;
+    transform: scaleX(0);
+    width: auto;
+    height: 1px;
+    background-color: white;
+}
+
+
+.nav-cont li>a:hover::after {
+    animation: 
+    hovUnder 1s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/* --------------------- Header end ------------------------ */
+
+/* Main content start */
+
+.content {
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 50px;
+    background-color: white;
+    color: black;
+}
+
+.content h1 {
+    margin-bottom: 20px;
+}
+
+.content h1::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10em;
+}
+
+.content p {
+    max-width: 600px;
+    padding: 20px;
+    color: gray;
+    text-align: center;
+    margin: auto;
+    border: 1px dashed rgba(0, 0, 0, 0.425);
+    box-shadow: inset 0 0 10px #000;
+}
+
+.animCont{
+    color: tomato;
+    display: inline-block;
+    animation: 
+    scalScal 4s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.animCont2 {
+    color: lawngreen;
+    display: inline-block;
+    animation: 
+    rotRot 4s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.shoppingList {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    justify-content: center;
+}
+
+.item {
+    text-align: center;
+    width: 300px;
+    height: 350px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-left: 35px;
+    margin-top: 25px;
+    box-shadow: 5px 5px gray;
+}
+
+.item h1 {
+margin-top: 50px;
+}
+
+
+
+/* --------------------- Main content end ------------------------ */
+
+/* Footer start */
+
+footer{
+    background-color: rgb(29,29,29);
+    width: 100%;
+    height: 600px;
+    font-family: 'Catamaran', sans-serif;
+    margin-top: auto;
+}
+
+footer span {
+    position: relative;
+    top: 50px;
+    color: white;
+    margin-left: 300px;
+    padding: 10px 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+footer ul li {
+    position: relative;
+    top: 70px;
+    color: white;
+    margin-left: 300px;
+    list-style: none;
+    padding: 5px 10px;
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 20px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+footer ul{
+display: inline;
+}
+
+.fKol1 {
+    position: relative;
+    top: 70px;
+}
+
+.fKol2 {
+    position: relative;
+    left: 400px;
+    top: -115px;
+    width: max-content;
+}
+
+.fKol3 {
+    position: relative;
+    top: -300px;
+    left: 800px;
+    width: max-content;
+}
+
+.fLine {
+    border-bottom: 1.5px solid rgb(52,52,52);
+    width: 70%;
+    position: relative;
+    left: 15%;
+    top: -70px;
+}
+
+.cpr{
+    color: rgb(96,96,96);
+    position: relative;
+    left: 15%;
+    top: -40px;
+    width: max-content;
+}
+
+/* --------------------- Footer end ------------------------ */
+
+/* --------------------- Animations start ---------------------- */
+
+@keyframes scalScal {
+    0% {
+        /* transform: rotate(-5deg); */
+        transform: scale(1.1, 1.1);
+    }
+    50% {
+        /* transform: rotate(5deg); */
+        transform: scale(1, 1);
+    }
+    100% {
+        /* transform: rotate(-5deg); */
+        transform: scale(1.1, 1.1);
+    }
+}
+
+@keyframes rotRot {
+    0% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+
+@keyframes hovUnder {
+    50% {
+        transform: scaleX(1);
+    }
+}
+
+/* Animations end */

@@ -1,0 +1,134 @@
+<!-- TODO:
+Theme: Dark/White
+-->
+
+
+<!DOCTYPE html>
+
+<html lang="sv">
+
+<head>
+    <title>Brendon Vinjari - portfolio</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+        <!-- CDN stuff -->
+        <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+</head>
+
+<body class="dark-theme">
+
+    <img class="svg" id="themeToggle" src="sun.svg" alt="">
+    <span class="hintColor">Press N</span>
+
+
+    <h3 class="tip">Use <span class="arrK">up/down keys</span> to navigate and <span class="entK">enter</span> to enter a website</h3>
+    <h1 class="head">~/home/<span class="sBrendon">Brendon</span>/Desktop/<span class="sPortf">portfolio</span>:~$<span class="wrtAnim">|</span></h1>
+
+    <ul class="sidor">
+        <span class="cd">cd</span>
+        <li class="selected"><a href="Lektion 1 - IT/index.html" target="_blank" class="selected" id="selected">Lektion 1</a></li>
+        <li><a href="Emils elektriska t/index.html" target="_blank">Emils Elektriska</a></li>
+        <li><a href="kopiera websida/index.html" target="_blank">Kopiera websida</a></li>
+        <li><a href="regform/index.html" target="_blank">Registrerings Form</a></li>
+        <li><a href="webserver/ovning/ovning.php" target="_blank">PHP övningar</a></li>
+        <li><a href="webserver/test/index.php" target="_blank">Ny portfolio</a></li>
+    </ul>
+
+    <ul class="kontakt">
+        <span class="whoami">whoami</span>
+        <li><a href="https://www.instagram.com/brendddon_/" target="_blank"><span class="arrK">Name:</span> Brendon Vinjari</a></li>
+        <li><a href="mailto:03bvi01@skola.falun.se"><span class="arrK">Email:</span> 03bvi01@skola.falun.se</a></li>
+        <li><a href="tel:+46720361924"><span class="arrK">Tel:</span> +46720361924</a></li>
+    </ul>
+
+    <script>
+var ul = document.querySelector('ul');
+var nodes = document.querySelectorAll('li');
+var a = document.querySelectorAll('li a');
+var selected = 0;
+var selectedA = 0;
+var body = document.querySelector('body');
+var themeToggle = document.querySelector('.svg');
+
+// UL LI mouse navigation
+
+// [].forEach.call(nodes, function(el) {
+//     el.addEventListener('click', function() {
+//         select(this);
+//     })
+// });
+
+document.addEventListener('keydown', function(e) {
+    if (e.keyCode === 38) { // up
+        select(nodes[selected - 1]);
+        selectA(a[selectedA - 1]);
+    }
+    if (e.keyCode === 40) { // down
+        select(nodes[selected + 1]);
+        selectA(a[selectedA + 1]);
+    }
+    if(e.keyCode === 13) {
+        document.activeElement.click();
+    }
+    if(e.keyCode === 78) {
+        if (body.classList.contains('dark-theme')){
+            body.classList.remove('dark-theme');
+            body.classList.add('light-theme')
+            themeToggle.src = 'moon.svg'
+        }
+        else {
+            body.classList.remove('light-theme');
+            body.classList.add('dark-theme');
+            themeToggle.src = 'sun.svg'
+        }
+    }
+    e.preventDefault();
+});
+
+function select(el) {
+    var s = [].indexOf.call(nodes, el);
+    if (s === -1) return;
+    selected = s;
+
+    // For later optimization
+    // var elHeight = $(el).height();
+    // var scrollTop = $(ul).scrollTop();
+    // var viewport = scrollTop + $(ul).height();
+    // var elOffset = elHeight * selected;
+    document.querySelector('li.selected').classList.remove('selected');
+    el.classList.add('selected');
+}
+
+function selectA(elA) {
+    var sA = [].indexOf.call(a, elA);
+    if (sA === -1) return;
+    selectedA = sA;
+
+    document.querySelector('a.selected').classList.remove('selected');
+    elA.classList.add('selected');
+    document.querySelector('a#selected').removeAttribute("id", "selected");
+    elA.setAttribute("id", "selected");
+
+    setFocus();
+}
+
+function setFocus() {
+    document.querySelector('a#selected').focus();
+}
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+:root {
+    --val-bg-color: rgb(224, 224, 224);
+    --val-text-color: #000;
+    --val-border-color: rgb(211, 211, 211);
+    --val-selected-color: rgb(204, 204, 204);
+    --article-text-color: #af0707;
+    --article-text-description-color: #848484;
+}

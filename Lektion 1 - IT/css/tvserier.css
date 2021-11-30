@@ -1,0 +1,25 @@
+.menu {
+    padding: 10px 10px;
+    background-color: rgb(192, 192, 192);
+    text-align: center;
+}
+
+.menu a {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 7px 7px;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+}
+
+.menu a:hover {
+    color: blue;
+    transition-duration: 0.5s;
+    font-size: 20px;
+}
+
+.tvserie {
+    position: absolute;
+    left: 40px;
+}

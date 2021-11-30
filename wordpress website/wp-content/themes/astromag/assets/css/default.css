@@ -1,0 +1,660 @@
+body {
+	margin:0;
+	font-size: 16px;
+	font-weight: 400;
+    font-family: sans-serif;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    font-size: 15px;
+}
+ul li, ol li {
+    line-height: 1.5rem;
+}
+a:hover {
+	text-decoration: none;
+}
+input:focus, textarea:focus, button:focus, .form-control:focus, .btn.focus, .btn:focus, a:focus, button:focus, .search-box input.form-control:focus, button.close-search:focus {
+	outline: none;
+	border: 1px dashed #999999;
+}
+
+abbr[title],
+abbr[data-original-title] {
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+  cursor: help;
+  border-bottom: 0;
+}
+
+pre {
+    overflow: auto;
+}
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	-webkit-clip-path: inset(50%);
+	        clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	-webkit-clip-path: none;
+	        clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.clearfix::after {
+	display: block;
+	clear: both;
+	content: "";
+  }
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+
+.widget select {
+	max-width: 100%;
+}
+
+.widget > form > span.search-addon, .page-content > form > span.search-addon {
+    display: none;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+.content-area a {
+    text-decoration: underline;
+}
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.media-body {
+	max-width: 100%;
+}
+.comments-title {
+    font-size: 1.125rem;
+}
+
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.comment-content.card-block {
+    padding: 20px;
+}
+
+.comment-body .pull-left {
+    position: relative;
+    padding-right: 0.625rem;
+}
+
+.comment-body .pull-left:before {
+    position: absolute;
+    bottom: 5px;
+    right: -15px;
+    font-family: 'Font Awesome 6 Free';
+    content: "\f3be";
+    font-weight: 900;
+    font-size: 23px;
+    color: #df2021;
+}
+
+
+.bypostauthor {
+	display: block;
+}
+
+cite.fn a {
+    font-size: 1.1rem;
+    color: #5664ff;
+}
+
+.comment-meta a {
+    color: #6f6f6f;
+}
+
+.comment-meta {
+    margin-top: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+.comment-form p.logged-in-as {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment-form p.logged-in-as a {
+    color: rgb(51, 153, 255);
+    text-decoration: none;
+}
+h3.comment-reply-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+h3.comment-reply-title a {
+    color: rgb(51, 153, 255);
+    font-weight: 400;
+}
+
+.comment-respond {
+    padding: 1.75rem 0rem;
+}
+.comment-form p label {
+    flex-direction: row;
+    margin-bottom: 5px;
+    width: auto;
+    max-width: 100%;
+}
+
+.comment-form p label span.required, .comment-notes span.required{
+    color: #ff0000;
+}
+/* -------------------------------------------------------------
+## Comments from BS class
+--------------------------------------------------------------*/
+/* .media {
+    display: flex;
+    align-items: flex-start;
+} */
+
+.media-body {
+    flex: 1;
+}
+
+.media-body-wrap {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid rgba(0,0,0,0.125);
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+}
+
+.media-body-wrap .card-header, .media-body-wrap .card-footer {
+    padding: 1rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,0.03);
+    border-bottom: 1px solid rgba(0,0,0,0.125);
+}
+
+.media-body-wrap .card-header:first-child {
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+
+.media-body-wrap .card-footer {
+    border-bottom: none;
+    border-top: 1px solid rgba(0,0,0,0.125);
+}
+
+.media-body-wrap .card-footer:last-child {
+    border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	/* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/*----------------
+Alerts
+----------------*/
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+/*---------------------
+Button
+---------------------*/
+
+.btn {
+    padding: 0.4rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: rgb(2, 123, 255);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    color: #ffffff;
+    background-color: rgb(1, 105, 217);
+}
+
+
+/* Widget */
+aside.bg-right section {
+    width: 100%;
+}
+
+.widget-area .widget ul {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    line-height: 30px;
+}
+
+.widget ul.nav li a.nav-link {
+    display: inline-block;
+}
+
+.widget-area .widget ul ul {
+    padding-left: 10px;
+}
+
+/* Widget calender Table */
+.calendar_wrap table th {
+    background-color: #f1f1f1;
+}
+
+.calendar_wrap table {
+    width: 100%;
+    font-size: 15px;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.calendar_wrap table th, .calendar_wrap table td {
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    padding: 5px;
+}
+/* Widget RSS */
+.widget_rss li {
+    margin-bottom: 20px;
+}
+
+.widget_rss, .widget_rss span {
+    font-size: 90%;
+    padding-left: 15px;
+}
+
+.widget-area .widget.widget_rss a {
+    font-weight: 600;
+}
+/* Widget Search */
+input[type=search] {
+    border: 1px solid #ebecf1 !important;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+    line-height: 1.6rem;
+    padding: 10px 10px;
+    background-color: #f4f5fc;
+  }
+
+  button[type=submit] {
+    background-color: #5664ff !important;
+    border: 1px solid #5664ff !important;
+    border-radius: 0 5px 5px 0;
+    padding: 0 15px !important;
+    margin: 0 !important;
+    color: #ffffff !important;
+  }
+
+input[type=submit] {
+    padding: 2px 20px;
+    background-color: #46BE25;
+    border: 1px solid #46BE25;
+    margin: -2px 0 0 0;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 27px;
+    cursor: pointer;
+}
+
+
+/* Blog single calender Table */
+.entry-title {
+    overflow-wrap: break-word;
+}
+.entry-content table th {
+    background-color: #f1f1f1;
+}
+
+.entry-content table {
+    width: 100%;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.entry-content table th, .entry-content table td {
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Blog single normal table */
+.entry-content table {
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	width: 100%;
+	margin-bottom: 20px;
+}
+.entry-content table th, .entry-content table td {
+	padding: 10px;
+	border-right: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+}
+.entry-content table thead th {
+	background-color: #ddd;
+}
+/* Definition and UL OL list */
+.entry-content dd {
+	margin-bottom: 20px;
+}
+.ulol ul, .ulol ol {
+	padding-left: 15px;
+}
+/* Comment Area normal table */
+ul.children {
+    list-style: none;
+}
+
+.comments-area {
+    padding: 40px 0;
+}
+
+.comment-body {
+    padding: 10px 0;
+}
+
+.pull-left img {
+    border-radius: 50%;
+}
+
+h2.comments-title {
+    background-color: #5664ff;
+    padding: 15px 25px;
+    color: #fff;
+    border-radius: 25px;;
+}
+
+.comments-area p.no-comments {
+    padding: 10px;
+    font-weight: 700;
+    background-color: #e21b48;
+    color: #fff;
+    display: block;
+}
+
+.comments-area table {
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	width: 100%;
+	margin-bottom: 20px;
+}
+.comments-area table th, .comments-area table td {
+	padding: 10px;
+	border-right: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+}
+.comments-area table thead th {
+	background-color: #ddd;
+}
+/* Definition and UL OL list */
+.comments-area dd {
+	margin-bottom: 20px;
+}
+.comments-area ul.comment-list, .comments-area ol.comment-list {
+	padding-left: 0px;
+	list-style: none;
+}
+/* address tag */
+address {
+	font-style: italic;
+}
+/* Single Blog nav */
+.nav-links {
+	overflow-wrap: break-word;
+	word-break: break-all;
+	margin-top: 50px;
+}
+.nav-links a{
+	display: inline-block;
+	background-color: #333;
+	color: #fff;
+	padding: 5px 10px;
+}
+
+.nav-links .nav-previous a, .nav-links .nav-next a {
+    color: #ffffff;
+}
+
+.nav-previous, .nav-next{
+	max-width: 50%;
+}
+.nav-previous {
+	float: left;
+}
+.nav-next {
+	text-align: right;
+}
+.nav-link {
+    padding: .3rem;
+}
+/* Page Links pagination */ 
+.page-links a {
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+}
+/* Comment form */
+.comment-form input, .comment-form textarea {
+    max-width: 100%;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+}
+
+.comment-form input[type=submit] {
+    width: auto;
+    background-color: #5664ff;
+    border-radius: 5px;
+}

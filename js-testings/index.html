@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <!-- <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script> -->
+
+    <title>To-do list</title>
+</head>
+<body>
+
+    <div id="app" class="container">
+        <div class="box center">
+            <div class="bHead">
+                <h1>Min todo list:</h1>
+            </div>
+            <div class="bCont">
+                <ul class="todo">
+                    <li v-for="(todo, index) in todos" class="list-items" v-on:click="removeTodo(index)">
+                        <del v-if="todo.done">{{ todo.text }}</del>
+                        <p v-else>{{ todo.text }}</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="bFoot">
+                <input type="text" name="" placeholder="Lägg till en To-do" v-model="newtask" v-on:keyup.enter="addTodo">
+                <a href="" class="button is-success" v-on:click="addTodo">Lägg till</a>
+                <a href="" class="button is-danger" v-on:click="removeAllTodo">Radera alla</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                newtask: '',
+                todos: []
+            },
+            methods: {
+                addTodo: function() {
+                    this.todos.push({ text: this.newtask });
+                    this.save();
+                },
+
+                removeTodo: function(index){
+                    if(this.todos[index].done){
+                        this.todos.splice(index, 1);
+                    } else {
+                        this.todos[index].done=true;
+                    }
+                    this.$forceUpdate();
+                    this.save();
+                },
+
+                save: function(){
+                    localStorage.todos = JSON.stringify(this.todos);
+                },
+                
+                removeAllTodo: function(){
+                    localStorage.removeItem("todos");
+                }
+            },
+            mounted() {
+                if(localStorage.todos) {
+                    this.todos = JSON.parse(localStorage.todos);
+                }
+            } 
+        })
+    </script>
+</body>
+</html>

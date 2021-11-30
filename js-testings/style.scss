@@ -1,0 +1,101 @@
+$background-primary: #333;
+$textcolor-primary: #fff;
+$textcolor-secondary: #111;
+// @import url(node_modules/bulma/bulma.sass);
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $background-primary;
+    font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+    color: $textcolor-primary;
+}
+
+ul {
+    list-style-type: numeric;
+
+    li:hover {
+        cursor: pointer;
+    }
+}
+
+.button {
+    padding: 15px;
+    text-decoration: none;
+    color: $textcolor-primary;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.is-success {
+    background-color: rgb(9, 212, 60);
+}
+
+.is-danger {
+    background-color: rgb(226, 49, 17);
+}
+
+.container {
+width: 100%;
+height: 100%;
+}
+
+.box {
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+    height: 50vh;
+    background-color: white;
+    color: $textcolor-secondary;
+
+    @media only screen and (max-width: 500px) {
+        width: 100%;
+        height: 100%;
+    }
+
+    .bCont {
+        margin-top: 20px;
+        margin-bottom: 100px;
+        overflow: auto;
+        box-shadow: inset 0 0 5px #000;
+
+    }
+    .bHead::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: black;
+    }
+    .bFoot{
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 40px;
+    }
+
+    input {
+        height: 30px;
+        font-size: 18px;
+        border: none;
+        border-bottom: 1px solid #777;
+    }
+    input:focus {
+        outline: none;
+    }
+}
+
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 1324px) {
+    .box {
+        width: 100vh;
+        height: 75vh;
+    }
+}

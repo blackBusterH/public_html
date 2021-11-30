@@ -1,0 +1,34 @@
+@import "var.css";
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: 7%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: 1.2px solid var(--val-border-color);
+}
+
+.val {
+    background-color: var(--val-bg-color);
+    width: 100%;
+    height: 100%;
+    padding-top: 2.5%;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--val-text-color);
+}
+
+.val img {
+    margin-right: 10px;
+}
+
+.valMat {
+    border-right: 1.2px solid var(--val-border-color);
+}
+
+.val:hover {
+    background: var(--val-selected-color);
+}

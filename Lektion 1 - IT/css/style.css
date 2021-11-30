@@ -1,0 +1,208 @@
+body,
+html {
+    height: 100%;
+}
+
+.bakgrund {
+    background-image: url("https://www.webdesigndev.com/wp-content/uploads/2018/04/11-3px-tile-Free-Dark-Background.jpg");
+    filter: blur(2px);
+    height: 100%;
+}
+
+.menu {
+    padding: 10px 10px;
+    background-color: rgb(192, 192, 192);
+    text-align: center;
+}
+
+.menu a {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 7px 7px;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+}
+
+.menu a:hover {
+    color: blue;
+    transition-duration: 0.5s;
+    font-size: 20px;
+}
+
+.minbild {
+    position: absolute;
+    left: 40px;
+    top: 80px;
+    border-radius: 50px;
+    height: 90px;
+    width: 90px;
+}
+
+.brendon {
+    position: absolute;
+    top: 80px;
+    left: 150px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sporter {
+    position: absolute;
+    top: 250px;
+    left: 520px;
+    font-size: 30px;
+}
+
+.fotboll {
+    position: absolute;
+    top: 350px;
+    left: 250px;
+    color: white;
+    font-size: 19px;
+}
+
+.uefa {
+    position: absolute;
+    top: 400px;
+    left: 225px;
+    width: 100px;
+    height: 120px;
+    filter: brightness(100);
+}
+
+.mma {
+    position: absolute;
+    top: 350px;
+    left: 850px;
+    font-size: 19px;
+    color: white;
+}
+
+.ufcpic {
+    position: absolute;
+    top: 370px;
+    left: 900px;
+    width: 120px;
+    height: 160px;
+}
+
+.rainbow {
+    position: absolute;
+    top: 250px;
+    left: 400px;
+    font-family: cursive;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 40px;
+    -webkit-animation: rainbow 5s infinite;
+    -ms-animation: rainbow 5s infinite;
+    animation: rainbow 5s infinite;
+}
+
+@-webkit-keyframes rainbow {
+    0% {
+        color: orange;
+    }
+    10% {
+        color: purple;
+    }
+    20% {
+        color: red;
+    }
+    30% {
+        color: CadetBlue;
+    }
+    40% {
+        color: yellow;
+    }
+    50% {
+        color: coral;
+    }
+    60% {
+        color: green;
+    }
+    70% {
+        color: cyan;
+    }
+    80% {
+        color: DeepPink;
+    }
+    90% {
+        color: DodgerBlue;
+    }
+    100% {
+        color: orange;
+    }
+}
+
+@-ms-keyframes rainbow {
+    0% {
+        color: orange;
+    }
+    10% {
+        color: purple;
+    }
+    20% {
+        color: red;
+    }
+    30% {
+        color: CadetBlue;
+    }
+    40% {
+        color: yellow;
+    }
+    50% {
+        color: coral;
+    }
+    60% {
+        color: green;
+    }
+    70% {
+        color: cyan;
+    }
+    80% {
+        color: DeepPink;
+    }
+    90% {
+        color: DodgerBlue;
+    }
+    100% {
+        color: orange;
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        color: orange;
+    }
+    10% {
+        color: purple;
+    }
+    20% {
+        color: red;
+    }
+    30% {
+        color: CadetBlue;
+    }
+    40% {
+        color: yellow;
+    }
+    50% {
+        color: coral;
+    }
+    60% {
+        color: green;
+    }
+    70% {
+        color: cyan;
+    }
+    80% {
+        color: DeepPink;
+    }
+    90% {
+        color: DodgerBlue;
+    }
+    100% {
+        color: orange;
+    }
+}
