@@ -1,12 +1,14 @@
 @import "header.css";
 @import "footer.css";
 
-
-.landing {
+body{
     background-image: url('../img/landing-car.jpg');
-    height: 85%;
+    height: 100%;
     width: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.txt-white {
+    color: #fff;
 }
